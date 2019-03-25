@@ -22,7 +22,6 @@ class CreateRegistrationsTable extends Migration
             $table->string('address_proof');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('salt');
             $table->string('role');
             $table->timestamps();
         });
