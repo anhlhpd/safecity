@@ -12,18 +12,79 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="first_name" class="col-md-4 col-form-label text-md-right">{{ __('First Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="first_name" type="text" class="form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}" name="first_name" value="{{ old('first_name') }}" required>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('first_name'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('first_name') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
+
+                        <div class="form-group row">
+                            <label for="last_name" class="col-md-4 col-form-label text-md-right">{{ __('Last Name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="last_name" type="text" class="form-control{{ $errors->has('last_name') ? ' is-invalid' : '' }}" name="last_name" value="{{ old('last_name') }}" required>
+
+                                @if ($errors->has('last_name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('last_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="address" type="text" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" value="{{ old('address') }}" required>
+
+                                @if ($errors->has('address'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('address') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        {{--<div class="form-group row">--}}
+                            {{--<label for="address-proof" class="col-md-4 col-form-label text-md-right">{{ __('Address Proof') }}</label>--}}
+
+                            {{--<div class="col-md-6">--}}
+                                {{--<input id="address-proof" type="file" class="form-control{{ $errors->has('address-proof') ? ' is-invalid' : '' }}" name="address-proof" value="{{ old('address-proof') }}" required>--}}
+
+                                {{--<div class="input-group">--}}
+                                    {{--<div class="custom-file">--}}
+                                        {{--<input type="file" class="custom-file-input" id="address-proof" aria-describedby="inputGroupFileAddon01" name="address-proof" required>--}}
+                                        {{--<label class="custom-file-label" for="address-proof">Choose file</label>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+
+                                {{--@if ($errors->has('address-proof'))--}}
+                                    {{--<span class="invalid-feedback" role="alert">--}}
+                                        {{--<strong>{{ $errors->first('address-proof') }}</strong>--}}
+                                    {{--</span>--}}
+                                {{--@endif--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+                        {{--<div class="form-group row">--}}
+                            {{--<div class="input-group">--}}
+                                {{--<div class="input-group-prepend">--}}
+                                    {{--<span class="input-group-text" id="inputGroupFileAddon01">Upload</span>--}}
+                                {{--</div>--}}
+                                {{--<div class="custom-file">--}}
+                                    {{--<input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">--}}
+                                    {{--<label class="custom-file-label" for="inputGroupFile01">Choose file</label>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
