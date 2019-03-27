@@ -53,6 +53,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="contact" class="col-md-4 col-form-label text-md-right">{{ __('Contact') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="contact" type="text" class="form-control{{ $errors->has('contact') ? ' is-invalid' : '' }}" name="contact" value="{{ old('contact') }}" required>
+
+                                @if ($errors->has('contact'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('contact') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         {{--<div class="form-group row">--}}
                             {{--<label for="address-proof" class="col-md-4 col-form-label text-md-right">{{ __('Address Proof') }}</label>--}}
 

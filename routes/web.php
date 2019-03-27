@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => ['checkGuest']],function (){
-    Route::post('/login',['as' => 'login', 'uses' => 'Auth\LoginController@login']);
+    Route::post('/login',['as' => 'login', 'uses' => 'Auth\LoginController@authenticate']);
     Route::post('/register',['as' => 'register', 'uses' => 'Auth\RegisterController@register']);
     Route::get('/client-login',['as' => 'client.login','uses' => 'Auth\LoginController@index']);
 });
